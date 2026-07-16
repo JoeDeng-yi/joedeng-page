@@ -1,0 +1,912 @@
+{
+  "ResponseStatus": {
+    "Timestamp": "/Date(1784123922372+0800)/",
+    "Ack": "Success",
+    "Errors": null,
+    "Extension": null
+  },
+  "DataResponse": {
+    "Hotel": [
+      {
+        "HotelID": 717957,
+        "Hotel_Availability": "Available",
+        "CityID": 338,
+        "CityName": "Λονδίνο",
+        "CheckInTime": "/Date(1791388800000-0000)/",
+        "CheckOutTime": "/Date(1791475200000-0000)/",
+        "SubRoom": [
+          {
+            "RoomID": 474062853,
+            "RoomInfo": {
+              "RoomName": "Classic δίκλινο δωμάτιο με διπλό κρεβάτι - (Κράτηση 3 ημέρες νωρίτερα)",
+              "MaxOccupancy": 2,
+              "BedInfo": [
+                {
+                  "BedType": "Double Bed",
+                  "Wdith": 0,
+                  "Unit": "meter",
+                  "BedTypeId": 3
+                }
+              ],
+              "RoomArea": {
+                "Size": 20,
+                "Unit": "square_meter"
+              },
+              "Holdroom": 126,
+              "RoomPhotos": [
+                {}
+              ]
+            },
+            "Inclusions": [
+              {
+                "type": "FreeBreakfast",
+                "Value": "0"
+              },
+              {
+                "type": "FreeWifi",
+                "Value": "1"
+              }
+            ],
+            "RulesandRestrictions": {
+              "PaymentMethod": "Prepay online",
+              "Cancellation": {
+                "Guarantee": true,
+                "Refundable": false,
+                "Deadline": "/Date(1784123922370+0800)/",
+                "DeadlineStr": "2026-07-15 21:58:42"
+              }
+            },
+            "PayType": "PP",
+            "BookURL": "https://gr.trip.com/hotels/redirect?hotelid=717957\u0026city=338\u0026Allianceid=12607\u0026sid=24739020\u0026checkin=2026-10-08\u0026checkout=2026-10-09\u0026shoppingid=c2bc42cb5a2f4ef1bc02a389391dc51e\u0026adult=2\u0026children=0\u0026ages=\u0026language=elgr\u0026locale=el_GR\u0026roomid=474062853\u0026swid=0\u0026pay=PP\u0026fgt=1\u0026is_sp=Q2\u0026is_sp=M2\u0026crn=1\u0026curr=EUR\u0026wkp=1\u0026stand=H4sIAAAAAAAA_wAcAeP-CnoKAhgCEgQIARAAGm4IhcCG4gEYADAAOJESmAGF6SuoAQC4AQLAAQDRAYXrUbgeRXBA4QGuR-F6FGp0QOgBrYrbswGIAmCJBHsUrkfheixAoAQIqgQMCNwPEUjhehSuF1FAqgQMCNoPEY_C9Shcz0ZAoQUzMzMzM-thQBogYzJiYzQyY2I1YTJmNGVmMWJjMDJhMzg5MzkxZGM1MWUgBCiSpN7SBkgBUgYwZjgxN2JaHAoDR0JQEa36XG3FLiJAGgNFVVIhMnctIR_0HkBiBWVsX0dSaJUWcAF4AIoBB0gBeADIAQGqAQcKAzAyMhAC8gEiYzJiYzQyY2I1YTJmNGVmMWJjMDJhMzg5MzkxZGM1MWVfMJICATOaAgAAAAD__wEAAP__VfQjmhwBAAA",
+            "IsSmoking": 0,
+            "ShadowRoomID": "0",
+            "RoomRate": {
+              "Currency": "EUR",
+              "LengthOfStay": 1,
+              "Rooms": 1,
+              "BaseRate": {
+                "AverageAmount": 260.32,
+                "TotalAmount": 260.32,
+                "Amount": 326.63,
+                "PromotionRate": null,
+                "PublicPrice": 440.62,
+                "PublicBasePrice": 374.31,
+                "PublicTotalPrice": 388.55,
+                "PublicTotalBasePrice": 374.31
+              },
+              "TaxAndFees": [
+                {
+                  "TotalAmount": 14.24,
+                  "AverageAmount": 14.24,
+                  "SubId": 12,
+                  "SubType": "Accommodation Fee",
+                  "PaidAtCheckout": true
+                },
+                {
+                  "TotalAmount": 52.07,
+                  "AverageAmount": 52.07,
+                  "SubId": 4,
+                  "SubType": "VAT",
+                  "PaidAtCheckout": false
+                }
+              ]
+            },
+            "RatePlanID": 0,
+            "RateTagging": [
+              "MemberExclusive",
+              "MobileExclusive"
+            ],
+            "MasterRoomID": 376882477,
+            "UserLevel": ""
+          },
+          {
+            "RoomID": 474058681,
+            "RoomInfo": {
+              "RoomName": "Classic δίκλινο δωμάτιο με διπλό κρεβάτι",
+              "MaxOccupancy": 2,
+              "BedInfo": [
+                {
+                  "BedType": "Double Bed",
+                  "Wdith": 0,
+                  "Unit": "meter",
+                  "BedTypeId": 3
+                }
+              ],
+              "RoomArea": {
+                "Size": 20,
+                "Unit": "square_meter"
+              },
+              "Holdroom": 126,
+              "RoomPhotos": [
+                {}
+              ]
+            },
+            "Inclusions": [
+              {
+                "type": "FreeBreakfast",
+                "Value": "0"
+              },
+              {
+                "type": "FreeWifi",
+                "Value": "1"
+              }
+            ],
+            "RulesandRestrictions": {
+              "PaymentMethod": "Prepay online",
+              "Cancellation": {
+                "Guarantee": true,
+                "Refundable": true,
+                "Deadline": "/Date(1791385200000+0800)/",
+                "DeadlineStr": "2026-10-07 23:00:00"
+              }
+            },
+            "PayType": "PP",
+            "BookURL": "https://gr.trip.com/hotels/redirect?hotelid=717957\u0026city=338\u0026Allianceid=12607\u0026sid=24739020\u0026checkin=2026-10-08\u0026checkout=2026-10-09\u0026shoppingid=c2bc42cb5a2f4ef1bc02a389391dc51e\u0026adult=2\u0026children=0\u0026ages=\u0026language=elgr\u0026locale=el_GR\u0026roomid=474058681\u0026swid=0\u0026pay=PP\u0026fgt=1\u0026is_sp=Q2\u0026is_sp=M2\u0026crn=1\u0026curr=EUR\u0026wkp=1\u0026stand=H4sIAAAAAAAA_wAcAeP-CnoKAhgCEgQIARAAGm4IuZ-G4gEYADAAOJESmAGF6SuoAQG4AQLAAQDRAUjhehSux3NA4QGamZmZmbl4QOgBrYrbswGIAmCJBKRwPQrXoy9AoAQIqgQMCNwPEY_C9Shc_1JAqgQMCNoPERSuR-F6VElAoQVmZmZmZqZfQBogYzJiYzQyY2I1YTJmNGVmMWJjMDJhMzg5MzkxZGM1MWUgBCiSpN7SBkgBUgY4ZjUwMTJaHAoDR0JQEa36XG3FLiJAGgNFVVIhMnctIR_0HkBiBWVsX0dSaJUWcAF4AIoBB0gBeADIAQGqAQcKAzAyMhAC8gEiYzJiYzQyY2I1YTJmNGVmMWJjMDJhMzg5MzkxZGM1MWVfMJICATOaAgAAAAD__wEAAP__SrKLBhwBAAA",
+            "IsSmoking": 0,
+            "ShadowRoomID": "0",
+            "RoomRate": {
+              "Currency": "EUR",
+              "LengthOfStay": 1,
+              "Rooms": 1,
+              "BaseRate": {
+                "AverageAmount": 316.48,
+                "TotalAmount": 316.48,
+                "Amount": 395.60,
+                "PromotionRate": null,
+                "PublicPrice": 522.25,
+                "PublicBasePrice": 443.13,
+                "PublicTotalPrice": 458.95,
+                "PublicTotalBasePrice": 443.13
+              },
+              "TaxAndFees": [
+                {
+                  "TotalAmount": 15.82,
+                  "AverageAmount": 15.82,
+                  "SubId": 12,
+                  "SubType": "Accommodation Fee",
+                  "PaidAtCheckout": true
+                },
+                {
+                  "TotalAmount": 63.3,
+                  "AverageAmount": 63.30,
+                  "SubId": 4,
+                  "SubType": "VAT",
+                  "PaidAtCheckout": false
+                }
+              ]
+            },
+            "RatePlanID": 0,
+            "RateTagging": [
+              "MemberExclusive",
+              "MobileExclusive"
+            ],
+            "MasterRoomID": 376882477,
+            "UserLevel": ""
+          },
+          {
+            "RoomID": 698145221,
+            "RoomInfo": {
+              "RoomName": "Deluxe στούντιο",
+              "MaxOccupancy": 2,
+              "BedInfo": [
+                {
+                  "BedType": "Double Bed",
+                  "Wdith": 0,
+                  "Unit": "meter",
+                  "BedTypeId": 3
+                },
+                {
+                  "BedType": "Twin bed",
+                  "Wdith": 0,
+                  "Unit": "meter",
+                  "BedTypeId": 2
+                }
+              ],
+              "RoomArea": {
+                "Size": 20,
+                "Unit": "square_meter"
+              },
+              "Holdroom": 9999,
+              "RoomPhotos": [
+                {}
+              ]
+            },
+            "Inclusions": [
+              {
+                "type": "FreeBreakfast",
+                "Value": "0"
+              },
+              {
+                "type": "FreeWifi",
+                "Value": "1"
+              }
+            ],
+            "RulesandRestrictions": {
+              "PaymentMethod": "Pay at hotel",
+              "Cancellation": {
+                "Guarantee": true,
+                "Refundable": false,
+                "Deadline": "/Date(1784123922371+0800)/",
+                "DeadlineStr": "2026-07-15 21:58:42"
+              }
+            },
+            "PayType": "FG",
+            "BookURL": "https://gr.trip.com/hotels/redirect?hotelid=717957\u0026city=338\u0026Allianceid=12607\u0026sid=24739020\u0026checkin=2026-10-08\u0026checkout=2026-10-09\u0026shoppingid=c2bc42cb5a2f4ef1bc02a389391dc51e\u0026adult=2\u0026children=0\u0026ages=\u0026language=elgr\u0026locale=el_GR\u0026roomid=698145221\u0026swid=0\u0026pay=FG\u0026fgt=1\u0026crn=1\u0026curr=EUR\u0026wkp=1\u0026stand=H4sIAAAAAAAA_wACAf3-CmAKAhgCEgQIARAAGlQIxbPzzAISATIYADDkATivW5gBhekrqAEAuAECwAEA0QHNzMzMzPh0QOEBw_UoXI8qeUDoAenduJECiAJgiQQAAAAAAAAAAKAEAKEFAAAAAAAAAAAaIGMyYmM0MmNiNWEyZjRlZjFiYzAyYTM4OTM5MWRjNTFlIAQokqTe0gZIAVIGMGI1ODRkWhwKA0dCUBGt-lxtxS4iQBoDRVVSITJ3LSEf9B5AYgVlbF9HUmiVFnABeACKAQdIAXgAyAEBqgEHCgMwMjEQAvIBImMyYmM0MmNiNWEyZjRlZjFiYzAyYTM4OTM5MWRjNTFlXzCSAgEzmgIAAAAA__8BAAD___5WxWgCAQAA",
+            "IsSmoking": 0,
+            "ShadowRoomID": "0",
+            "RoomRate": {
+              "Currency": "EUR",
+              "LengthOfStay": 1,
+              "Rooms": 1,
+              "BaseRate": {
+                "AverageAmount": 335.55,
+                "TotalAmount": 335.55,
+                "Amount": 402.66,
+                "PromotionRate": null
+              },
+              "TaxAndFees": [
+                {
+                  "TotalAmount": 67.11,
+                  "AverageAmount": 67.11,
+                  "SubId": 75,
+                  "SubType": "other tax",
+                  "PaidAtCheckout": false
+                }
+              ]
+            },
+            "RatePlanID": 2,
+            "RateTagging": [],
+            "MasterRoomID": 573452009,
+            "UserLevel": ""
+          },
+          {
+            "RoomID": 548790190,
+            "RoomInfo": {
+              "RoomName": "Deluxe στούντιο",
+              "MaxOccupancy": 2,
+              "BedInfo": [
+                {
+                  "BedType": "Double Bed",
+                  "Wdith": 0,
+                  "Unit": "meter",
+                  "BedTypeId": 3
+                },
+                {
+                  "BedType": "Twin bed",
+                  "Wdith": 0,
+                  "Unit": "meter",
+                  "BedTypeId": 2
+                }
+              ],
+              "RoomArea": {
+                "Size": 20,
+                "Unit": "square_meter"
+              },
+              "Holdroom": 9999,
+              "RoomPhotos": [
+                {}
+              ]
+            },
+            "Inclusions": [
+              {
+                "type": "FreeBreakfast",
+                "Value": "0"
+              },
+              {
+                "type": "FreeWifi",
+                "Value": "1"
+              }
+            ],
+            "RulesandRestrictions": {
+              "PaymentMethod": "Prepay online",
+              "Cancellation": {
+                "Guarantee": true,
+                "Refundable": false,
+                "Deadline": "/Date(1784123922371+0800)/",
+                "DeadlineStr": "2026-07-15 21:58:42"
+              }
+            },
+            "PayType": "PP",
+            "BookURL": "https://gr.trip.com/hotels/redirect?hotelid=717957\u0026city=338\u0026Allianceid=12607\u0026sid=24739020\u0026checkin=2026-10-08\u0026checkout=2026-10-09\u0026shoppingid=c2bc42cb5a2f4ef1bc02a389391dc51e\u0026adult=2\u0026children=0\u0026ages=\u0026language=elgr\u0026locale=el_GR\u0026roomid=548790190\u0026swid=0\u0026pay=PP\u0026fgt=1\u0026crn=1\u0026curr=EUR\u0026wkp=1\u0026stand=H4sIAAAAAAAA_wACAf3-CmAKAhgCEgQIARAAGlQIrr_XhQISATIYADDfATi1H5gBhekrqAEAuAECwAEA0QG4HoXrURx1QOEB16NwPQpLeUDoAenduJECiAJgiQQAAAAAAAAAAKAEAKEFAAAAAAAAAAAaIGMyYmM0MmNiNWEyZjRlZjFiYzAyYTM4OTM5MWRjNTFlIAQokqTe0gZIAVIGNDQ3ZDg1WhwKA1VTRBEQWDm0yBYbQBoDRVVSITJ3LSEf9B5AYgVlbF9HUmiVFnABeACKAQdIAXgAyAEBqgEHCgMwMjEQAvIBImMyYmM0MmNiNWEyZjRlZjFiYzAyYTM4OTM5MWRjNTFlXzCSAgEzmgIAAAAA__8BAAD__3pW25ACAQAA",
+            "IsSmoking": 0,
+            "ShadowRoomID": "0",
+            "RoomRate": {
+              "Currency": "EUR",
+              "LengthOfStay": 1,
+              "Rooms": 1,
+              "BaseRate": {
+                "AverageAmount": 337.77,
+                "TotalAmount": 337.77,
+                "Amount": 404.69,
+                "PromotionRate": null
+              },
+              "TaxAndFees": [
+                {
+                  "TotalAmount": 54.21,
+                  "AverageAmount": 54.21,
+                  "SubId": 75,
+                  "SubType": "other tax",
+                  "PaidAtCheckout": false
+                },
+                {
+                  "TotalAmount": 12.71,
+                  "AverageAmount": 12.71,
+                  "SubId": 77,
+                  "SubType": "other tax",
+                  "PaidAtCheckout": false
+                }
+              ]
+            },
+            "RatePlanID": 2,
+            "RateTagging": [],
+            "MasterRoomID": 573452009,
+            "UserLevel": ""
+          },
+          {
+            "RoomID": 698145188,
+            "RoomInfo": {
+              "RoomName": "Deluxe στούντιο",
+              "MaxOccupancy": 2,
+              "BedInfo": [
+                {
+                  "BedType": "Double Bed",
+                  "Wdith": 0,
+                  "Unit": "meter",
+                  "BedTypeId": 3
+                },
+                {
+                  "BedType": "Twin bed",
+                  "Wdith": 0,
+                  "Unit": "meter",
+                  "BedTypeId": 2
+                }
+              ],
+              "RoomArea": {
+                "Size": 20,
+                "Unit": "square_meter"
+              },
+              "Holdroom": 9999,
+              "RoomPhotos": [
+                {}
+              ]
+            },
+            "Inclusions": [
+              {
+                "type": "FreeBreakfast",
+                "Value": "0"
+              },
+              {
+                "type": "FreeWifi",
+                "Value": "1"
+              }
+            ],
+            "RulesandRestrictions": {
+              "PaymentMethod": "Pay at hotel",
+              "Cancellation": {
+                "Guarantee": true,
+                "Refundable": true,
+                "Deadline": "/Date(1791385200000+0800)/",
+                "DeadlineStr": "2026-10-07 23:00:00"
+              }
+            },
+            "PayType": "FG",
+            "BookURL": "https://gr.trip.com/hotels/redirect?hotelid=717957\u0026city=338\u0026Allianceid=12607\u0026sid=24739020\u0026checkin=2026-10-08\u0026checkout=2026-10-09\u0026shoppingid=c2bc42cb5a2f4ef1bc02a389391dc51e\u0026adult=2\u0026children=0\u0026ages=\u0026language=elgr\u0026locale=el_GR\u0026roomid=698145188\u0026swid=0\u0026pay=FG\u0026fgt=1\u0026crn=1\u0026curr=EUR\u0026wkp=1\u0026stand=H4sIAAAAAAAA_wACAf3-CmAKAhgCEgQIARAAGlQIpLPzzAISATIYADDkATivW5gBhekrqAEBuAECwAEA0QE9CtejcE13QOEBw_UoXI_2e0DoAenduJECiAJgiQQAAAAAAAAAAKAEAKEFAAAAAAAAAAAaIGMyYmM0MmNiNWEyZjRlZjFiYzAyYTM4OTM5MWRjNTFlIAQokqTe0gZIAVIGY2YxMjgxWhwKA0dCUBGt-lxtxS4iQBoDRVVSITJ3LSEf9B5AYgVlbF9HUmiVFnABeACKAQdIAXgAyAEBqgEHCgMwMjEQAvIBImMyYmM0MmNiNWEyZjRlZjFiYzAyYTM4OTM5MWRjNTFlXzCSAgEzmgIAAAAA__8BAAD__1Bnf7cCAQAA",
+            "IsSmoking": 0,
+            "ShadowRoomID": "0",
+            "RoomRate": {
+              "Currency": "EUR",
+              "LengthOfStay": 1,
+              "Rooms": 1,
+              "BaseRate": {
+                "AverageAmount": 372.84,
+                "TotalAmount": 372.84,
+                "Amount": 447.41,
+                "PromotionRate": null
+              },
+              "TaxAndFees": [
+                {
+                  "TotalAmount": 74.57,
+                  "AverageAmount": 74.57,
+                  "SubId": 75,
+                  "SubType": "other tax",
+                  "PaidAtCheckout": false
+                }
+              ]
+            },
+            "RatePlanID": 2,
+            "RateTagging": [],
+            "MasterRoomID": 573452009,
+            "UserLevel": ""
+          },
+          {
+            "RoomID": 548789947,
+            "RoomInfo": {
+              "RoomName": "Deluxe στούντιο",
+              "MaxOccupancy": 2,
+              "BedInfo": [
+                {
+                  "BedType": "Double Bed",
+                  "Wdith": 0,
+                  "Unit": "meter",
+                  "BedTypeId": 3
+                },
+                {
+                  "BedType": "Twin bed",
+                  "Wdith": 0,
+                  "Unit": "meter",
+                  "BedTypeId": 2
+                }
+              ],
+              "RoomArea": {
+                "Size": 20,
+                "Unit": "square_meter"
+              },
+              "Holdroom": 9999,
+              "RoomPhotos": [
+                {}
+              ]
+            },
+            "Inclusions": [
+              {
+                "type": "FreeBreakfast",
+                "Value": "0"
+              },
+              {
+                "type": "FreeWifi",
+                "Value": "1"
+              }
+            ],
+            "RulesandRestrictions": {
+              "PaymentMethod": "Prepay online",
+              "Cancellation": {
+                "Guarantee": true,
+                "Refundable": true,
+                "Deadline": "/Date(1791385200000+0800)/",
+                "DeadlineStr": "2026-10-07 23:00:00"
+              }
+            },
+            "PayType": "PP",
+            "BookURL": "https://gr.trip.com/hotels/redirect?hotelid=717957\u0026city=338\u0026Allianceid=12607\u0026sid=24739020\u0026checkin=2026-10-08\u0026checkout=2026-10-09\u0026shoppingid=c2bc42cb5a2f4ef1bc02a389391dc51e\u0026adult=2\u0026children=0\u0026ages=\u0026language=elgr\u0026locale=el_GR\u0026roomid=548789947\u0026swid=0\u0026pay=PP\u0026fgt=1\u0026crn=1\u0026curr=EUR\u0026wkp=1\u0026stand=H4sIAAAAAAAA_wACAf3-CmAKAhgCEgQIARAAGlQIu73XhQISATIYADDfATi1H5gBhekrqAEBuAECwAEA0QFxPQrXo3R3QOEBw_UoXI8afEDoAenduJECiAJgiQQAAAAAAAAAAKAEAKEFAAAAAAAAAAAaIGMyYmM0MmNiNWEyZjRlZjFiYzAyYTM4OTM5MWRjNTFlIAQokqTe0gZIAVIGMDNkNzYyWhwKA1VTRBEQWDm0yBYbQBoDRVVSITJ3LSEf9B5AYgVlbF9HUmiVFnABeACKAQdIAXgAyAEBqgEHCgMwMjEQAvIBImMyYmM0MmNiNWEyZjRlZjFiYzAyYTM4OTM5MWRjNTFlXzCSAgEzmgIAAAAA__8BAAD__6WQ7PsCAQAA",
+            "IsSmoking": 0,
+            "ShadowRoomID": "0",
+            "RoomRate": {
+              "Currency": "EUR",
+              "LengthOfStay": 1,
+              "Rooms": 1,
+              "BaseRate": {
+                "AverageAmount": 375.29,
+                "TotalAmount": 375.29,
+                "Amount": 449.66,
+                "PromotionRate": null
+              },
+              "TaxAndFees": [
+                {
+                  "TotalAmount": 14.13,
+                  "AverageAmount": 14.13,
+                  "SubId": 77,
+                  "SubType": "other tax",
+                  "PaidAtCheckout": false
+                },
+                {
+                  "TotalAmount": 60.24,
+                  "AverageAmount": 60.24,
+                  "SubId": 75,
+                  "SubType": "other tax",
+                  "PaidAtCheckout": false
+                }
+              ]
+            },
+            "RatePlanID": 2,
+            "RateTagging": [],
+            "MasterRoomID": 573452009,
+            "UserLevel": ""
+          },
+          {
+            "RoomID": 1815811365,
+            "RoomInfo": {
+              "RoomName": "Deluxe γωνιακό δωμάτιο",
+              "MaxOccupancy": 2,
+              "BedInfo": [
+                {
+                  "BedType": "Double Bed",
+                  "Wdith": 0,
+                  "Unit": "meter",
+                  "BedTypeId": 3
+                }
+              ],
+              "RoomArea": {
+                "Size": 24,
+                "Unit": "square_meter"
+              },
+              "Holdroom": 9999,
+              "RoomPhotos": [
+                {}
+              ]
+            },
+            "Inclusions": [
+              {
+                "type": "FreeBreakfast",
+                "Value": "1"
+              },
+              {
+                "type": "FreeWifi",
+                "Value": "1"
+              }
+            ],
+            "RulesandRestrictions": {
+              "PaymentMethod": "Prepay online",
+              "Cancellation": {
+                "Guarantee": true,
+                "Refundable": false,
+                "Deadline": "/Date(1784123922371+0800)/",
+                "DeadlineStr": "2026-07-15 21:58:42"
+              }
+            },
+            "PayType": "PP",
+            "BookURL": "https://gr.trip.com/hotels/redirect?hotelid=717957\u0026city=338\u0026Allianceid=12607\u0026sid=24739020\u0026checkin=2026-10-08\u0026checkout=2026-10-09\u0026shoppingid=c2bc42cb5a2f4ef1bc02a389391dc51e\u0026adult=2\u0026children=0\u0026ages=\u0026language=elgr\u0026locale=el_GR\u0026roomid=1815811365\u0026swid=0\u0026pay=PP\u0026fgt=1\u0026is_sp=Q1\u0026crn=1\u0026curr=EUR\u0026wkp=1\u0026stand=H4sIAAAAAAAA_wAJAfb-Cm4KAhgCEgQIARAAGmIIpars4QYSATIYADC2CjimZpgBhekrqAEAuAECwAEC0QGkcD0K13N4QOEBuB6F61GcfkDoAfepimuIAmCJBEjhehSuRzRAoAQGqgQMCNsPEcP1KFyP0m9AoQU9CtejcD0xQBogYzJiYzQyY2I1YTJmNGVmMWJjMDJhMzg5MzkxZGM1MWUgBCiSpN7SBkgBUgY3MmRmYmRaHAoDVVNEERBYObTIFhtAGgNFVVIhMnctIR_0HkBiBWVsX0dSaJUWcAF4AIoBB0gBeADIAQGqAQDyASJjMmJjNDJjYjVhMmY0ZWYxYmMwMmEzODkzOTFkYzUxZV8wkgIBM5oCAAAAAP__AQAA___5F_U9CQEAAA",
+            "IsSmoking": 0,
+            "ShadowRoomID": "0",
+            "RoomRate": {
+              "Currency": "EUR",
+              "LengthOfStay": 1,
+              "Rooms": 1,
+              "BaseRate": {
+                "AverageAmount": 391.24,
+                "TotalAmount": 391.24,
+                "Amount": 489.77,
+                "PromotionRate": null,
+                "PublicPrice": 744.35,
+                "PublicBasePrice": 645.82,
+                "PublicTotalPrice": 666.10,
+                "PublicTotalBasePrice": 645.82
+              },
+              "TaxAndFees": [
+                {
+                  "TotalAmount": 20.28,
+                  "AverageAmount": 20.28,
+                  "SubId": 12,
+                  "SubType": "Accommodation Fee",
+                  "PaidAtCheckout": true
+                },
+                {
+                  "TotalAmount": 78.25,
+                  "AverageAmount": 78.25,
+                  "SubId": 4,
+                  "SubType": "VAT",
+                  "PaidAtCheckout": false
+                }
+              ]
+            },
+            "RatePlanID": 2,
+            "RateTagging": [
+              "MemberExclusive"
+            ],
+            "MasterRoomID": 224564471,
+            "UserLevel": ""
+          },
+          {
+            "RoomID": 1815813964,
+            "RoomInfo": {
+              "RoomName": "Deluxe γωνιακό δωμάτιο",
+              "MaxOccupancy": 2,
+              "BedInfo": [
+                {
+                  "BedType": "Double Bed",
+                  "Wdith": 0,
+                  "Unit": "meter",
+                  "BedTypeId": 3
+                }
+              ],
+              "RoomArea": {
+                "Size": 24,
+                "Unit": "square_meter"
+              },
+              "Holdroom": 9999,
+              "RoomPhotos": [
+                {}
+              ]
+            },
+            "Inclusions": [
+              {
+                "type": "FreeBreakfast",
+                "Value": "1"
+              },
+              {
+                "type": "FreeWifi",
+                "Value": "1"
+              }
+            ],
+            "RulesandRestrictions": {
+              "PaymentMethod": "Prepay online",
+              "Cancellation": {
+                "Guarantee": true,
+                "Refundable": true,
+                "Deadline": "/Date(1791316800000+0800)/",
+                "DeadlineStr": "2026-10-07 04:00:00"
+              }
+            },
+            "PayType": "PP",
+            "BookURL": "https://gr.trip.com/hotels/redirect?hotelid=717957\u0026city=338\u0026Allianceid=12607\u0026sid=24739020\u0026checkin=2026-10-08\u0026checkout=2026-10-09\u0026shoppingid=c2bc42cb5a2f4ef1bc02a389391dc51e\u0026adult=2\u0026children=0\u0026ages=\u0026language=elgr\u0026locale=el_GR\u0026roomid=1815813964\u0026swid=0\u0026pay=PP\u0026fgt=1\u0026is_sp=Q1\u0026crn=1\u0026curr=EUR\u0026wkp=1\u0026stand=H4sIAAAAAAAA_wAJAfb-Cm4KAhgCEgQIARAAGmIIzL7s4QYSATIYADC2CjimZpgBhekrqAEBuAECwAEC0QEfhetRuCp8QOEBcT0K16OagUDoAfepimuIAmCJBEjhehSuhzZAoAQGqgQMCNsPEZqZmZmZMW5AoQUAAAAAAAAAABogYzJiYzQyY2I1YTJmNGVmMWJjMDJhMzg5MzkxZGM1MWUgBCiSpN7SBkgBUgZjZDFjNDdaHAoDVVNEERBYObTIFhtAGgNFVVIhMnctIR_0HkBiBWVsX0dSaJUWcAF4AIoBB0gBeADIAQGqAQDyASJjMmJjNDJjYjVhMmY0ZWYxYmMwMmEzODkzOTFkYzUxZV8wkgIBM5oCAAAAAP__AQAA__9B8OLCCQEAAA",
+            "IsSmoking": 0,
+            "ShadowRoomID": "0",
+            "RoomRate": {
+              "Currency": "EUR",
+              "LengthOfStay": 1,
+              "Rooms": 1,
+              "BaseRate": {
+                "AverageAmount": 450.67,
+                "TotalAmount": 450.67,
+                "Amount": 563.33,
+                "PromotionRate": null,
+                "PublicPrice": 804.88,
+                "PublicBasePrice": 692.22,
+                "PublicTotalPrice": 714.75,
+                "PublicTotalBasePrice": 692.22
+              },
+              "TaxAndFees": [
+                {
+                  "TotalAmount": 22.53,
+                  "AverageAmount": 22.53,
+                  "SubId": 12,
+                  "SubType": "Accommodation Fee",
+                  "PaidAtCheckout": true
+                },
+                {
+                  "TotalAmount": 90.13,
+                  "AverageAmount": 90.13,
+                  "SubId": 4,
+                  "SubType": "VAT",
+                  "PaidAtCheckout": false
+                }
+              ]
+            },
+            "RatePlanID": 2,
+            "RateTagging": [
+              "MemberExclusive"
+            ],
+            "MasterRoomID": 224564471,
+            "UserLevel": ""
+          },
+          {
+            "RoomID": 1812077902,
+            "RoomInfo": {
+              "RoomName": "Classic Τρίκλινο Δωμάτιο",
+              "MaxOccupancy": 2,
+              "BedInfo": [
+                {
+                  "BedType": "Double Bed",
+                  "Wdith": 0,
+                  "Unit": "meter",
+                  "BedTypeId": 3
+                }
+              ],
+              "RoomArea": {
+                "Size": 23,
+                "Unit": "square_meter"
+              },
+              "Holdroom": 7,
+              "RoomPhotos": [
+                {}
+              ]
+            },
+            "Inclusions": [
+              {
+                "type": "FreeBreakfast",
+                "Value": "1"
+              },
+              {
+                "type": "FreeWifi",
+                "Value": "1"
+              }
+            ],
+            "RulesandRestrictions": {
+              "PaymentMethod": "Prepay online",
+              "Cancellation": {
+                "Guarantee": true,
+                "Refundable": true,
+                "Deadline": "/Date(1791385200000+0800)/",
+                "DeadlineStr": "2026-10-07 23:00:00"
+              }
+            },
+            "PayType": "PP",
+            "BookURL": "https://gr.trip.com/hotels/redirect?hotelid=717957\u0026city=338\u0026Allianceid=12607\u0026sid=24739020\u0026checkin=2026-10-08\u0026checkout=2026-10-09\u0026shoppingid=c2bc42cb5a2f4ef1bc02a389391dc51e\u0026adult=2\u0026children=0\u0026ages=\u0026language=elgr\u0026locale=el_GR\u0026roomid=1812077902\u0026swid=0\u0026pay=PP\u0026fgt=1\u0026is_sp=M2\u0026crn=1\u0026curr=EUR\u0026wkp=1\u0026stand=H4sIAAAAAAAA_wAMAfP-CmoKAhgCEgQIARAAGl4IzrqI4AYYADAAOJESmAGF6SuoAQG4AQLAAQLRAZqZmZmZfYJA4QHXo3A9Ch2HQOgBt9GKa4gCYIkE16NwPQqXPUCgBAeqBAwI3A8RZmZmZmZWX0ChBaRwPQrXU19AGiBjMmJjNDJjYjVhMmY0ZWYxYmMwMmEzODkzOTFkYzUxZSAEKJKk3tIGSAFSBjhiNjhiOVocCgNHQlARrfpcbcUuIkAaA0VVUiEydy0hH_QeQGIFZWxfR1JolRZwAXgAigEHSAF4AMgBAaoBBwoDMDIyEALyASJjMmJjNDJjYjVhMmY0ZWYxYmMwMmEzODkzOTFkYzUxZV8wkgIBM5oCAAAAAP__AQAA___OsuSxDAEAAA",
+            "IsSmoking": 0,
+            "ShadowRoomID": "0",
+            "RoomRate": {
+              "Currency": "EUR",
+              "LengthOfStay": 1,
+              "Rooms": 1,
+              "BaseRate": {
+                "AverageAmount": 591.70,
+                "TotalAmount": 591.70,
+                "Amount": 739.63,
+                "PromotionRate": null,
+                "PublicPrice": 864.98,
+                "PublicBasePrice": 717.05,
+                "PublicTotalPrice": 746.64,
+                "PublicTotalBasePrice": 717.05
+              },
+              "TaxAndFees": [
+                {
+                  "TotalAmount": 29.59,
+                  "AverageAmount": 29.59,
+                  "SubId": 12,
+                  "SubType": "Accommodation Fee",
+                  "PaidAtCheckout": true
+                },
+                {
+                  "TotalAmount": 118.34,
+                  "AverageAmount": 118.34,
+                  "SubId": 4,
+                  "SubType": "VAT",
+                  "PaidAtCheckout": false
+                }
+              ]
+            },
+            "RatePlanID": 0,
+            "RateTagging": [
+              "MobileExclusive"
+            ],
+            "MasterRoomID": 224569527,
+            "UserLevel": ""
+          },
+          {
+            "RoomID": 823853955,
+            "RoomInfo": {
+              "RoomName": "Classic Τρίκλινο Δωμάτιο",
+              "MaxOccupancy": 2,
+              "BedInfo": [
+                {
+                  "BedType": "Double Bed",
+                  "Wdith": 0,
+                  "Unit": "meter",
+                  "BedTypeId": 3
+                }
+              ],
+              "RoomArea": {
+                "Size": 23,
+                "Unit": "square_meter"
+              },
+              "Holdroom": 9999,
+              "RoomPhotos": [
+                {}
+              ]
+            },
+            "Inclusions": [
+              {
+                "type": "FreeBreakfast",
+                "Value": "1"
+              },
+              {
+                "type": "FreeWifi",
+                "Value": "1"
+              }
+            ],
+            "RulesandRestrictions": {
+              "PaymentMethod": "Prepay online",
+              "Cancellation": {
+                "Guarantee": true,
+                "Refundable": false,
+                "Deadline": "/Date(1784123922372+0800)/",
+                "DeadlineStr": "2026-07-15 21:58:42"
+              }
+            },
+            "PayType": "PP",
+            "BookURL": "https://gr.trip.com/hotels/redirect?hotelid=717957\u0026city=338\u0026Allianceid=12607\u0026sid=24739020\u0026checkin=2026-10-08\u0026checkout=2026-10-09\u0026shoppingid=c2bc42cb5a2f4ef1bc02a389391dc51e\u0026adult=2\u0026children=0\u0026ages=\u0026language=elgr\u0026locale=el_GR\u0026roomid=823853955\u0026swid=0\u0026pay=PP\u0026fgt=1\u0026crn=1\u0026curr=EUR\u0026wkp=1\u0026stand=H4sIAAAAAAAA_wAKAfX-CmgKAhgCEgQIARAAGlwIg4fsiAMSCjEzMjM4MDY5MDIYADCrATipGJgBhekrqAEAuAECwAEC0QEpXI_C9ZqCQOEBSOF6FK5Bh0DoAbfRimuIAmCJBIXrUbgexT1AoAQAoQUAAAAAAAAAABogYzJiYzQyY2I1YTJmNGVmMWJjMDJhMzg5MzkxZGM1MWUgBCiSpN7SBkgBUgZkZTBhMGZaHAoDVVNEERBYObTIFhtAGgNFVVIhMnctIR_0HkBiBWVsX0dSaJUWcAF4AIoBB0gBeADIAQGqAQcKAzAyMRAC8gEiYzJiYzQyY2I1YTJmNGVmMWJjMDJhMzg5MzkxZGM1MWVfMJICATOaAgAAAAD__wEAAP__LMCp8woBAAA",
+            "IsSmoking": 0,
+            "ShadowRoomID": "0",
+            "RoomRate": {
+              "Currency": "EUR",
+              "LengthOfStay": 1,
+              "Rooms": 1,
+              "BaseRate": {
+                "AverageAmount": 595.37,
+                "TotalAmount": 595.37,
+                "Amount": 744.21,
+                "PromotionRate": null
+              },
+              "TaxAndFees": [
+                {
+                  "TotalAmount": 29.77,
+                  "AverageAmount": 29.77,
+                  "SubId": 12,
+                  "SubType": "Accommodation Fee",
+                  "PaidAtCheckout": true
+                },
+                {
+                  "TotalAmount": 119.07,
+                  "AverageAmount": 119.07,
+                  "SubId": 4,
+                  "SubType": "VAT",
+                  "PaidAtCheckout": false
+                }
+              ]
+            },
+            "RatePlanID": 1323806902,
+            "RateTagging": [],
+            "MasterRoomID": 224569527,
+            "UserLevel": ""
+          },
+          {
+            "RoomID": 1632927930,
+            "RoomInfo": {
+              "RoomName": "Deluxe γωνιακό δωμάτιο",
+              "MaxOccupancy": 2,
+              "BedInfo": [
+                {
+                  "BedType": "Double Bed",
+                  "Wdith": 0,
+                  "Unit": "meter",
+                  "BedTypeId": 3
+                }
+              ],
+              "RoomArea": {
+                "Size": 24,
+                "Unit": "square_meter"
+              },
+              "Holdroom": 9999,
+              "RoomPhotos": [
+                {}
+              ]
+            },
+            "Inclusions": [
+              {
+                "type": "FreeBreakfast",
+                "Value": "1"
+              },
+              {
+                "type": "FreeWifi",
+                "Value": "1"
+              }
+            ],
+            "RulesandRestrictions": {
+              "PaymentMethod": "Prepay online",
+              "Cancellation": {
+                "Guarantee": true,
+                "Refundable": true,
+                "Deadline": "/Date(1791090000000+0800)/",
+                "DeadlineStr": "2026-10-04 13:00:00"
+              }
+            },
+            "PayType": "PP",
+            "BookURL": "https://gr.trip.com/hotels/redirect?hotelid=717957\u0026city=338\u0026Allianceid=12607\u0026sid=24739020\u0026checkin=2026-10-08\u0026checkout=2026-10-09\u0026shoppingid=c2bc42cb5a2f4ef1bc02a389391dc51e\u0026adult=2\u0026children=0\u0026ages=\u0026language=elgr\u0026locale=el_GR\u0026roomid=1632927930\u0026swid=0\u0026pay=PP\u0026fgt=1\u0026crn=1\u0026curr=EUR\u0026wkp=1\u0026stand=H4sIAAAAAAAA_wD7AAT_CmAKAhgCEgQIARAAGlQIuoHSigYSATIYADCOFjiqiQGYAYXpK6gBAbgBAsABAtEBexSuR-EehEDhAcP1KFyPJolA6AH3qYpriAJgiQS4HoXrURhAQKAEAKEFAAAAAAAAAAAaIGMyYmM0MmNiNWEyZjRlZjFiYzAyYTM4OTM5MWRjNTFlIAQokqTe0gZIAVIGMGYxNjNkWhwKA1VTRBEQWDm0yBYbQBoDRVVSITJ3LSEf9B5AYgVlbF9HUmiVFnABeACKAQdIAXgAyAEBqgEA8gEiYzJiYzQyY2I1YTJmNGVmMWJjMDJhMzg5MzkxZGM1MWVfMJICATOaAgAAAAD__wEAAP__yTAUgvsAAAA",
+            "IsSmoking": 0,
+            "ShadowRoomID": "0",
+            "RoomRate": {
+              "Currency": "EUR",
+              "LengthOfStay": 1,
+              "Rooms": 1,
+              "BaseRate": {
+                "AverageAmount": 643.86,
+                "TotalAmount": 643.86,
+                "Amount": 804.82,
+                "PromotionRate": null
+              },
+              "TaxAndFees": [
+                {
+                  "TotalAmount": 32.19,
+                  "AverageAmount": 32.19,
+                  "SubId": 12,
+                  "SubType": "Accommodation Fee",
+                  "PaidAtCheckout": true
+                },
+                {
+                  "TotalAmount": 128.77,
+                  "AverageAmount": 128.77,
+                  "SubId": 4,
+                  "SubType": "VAT",
+                  "PaidAtCheckout": false
+                }
+              ]
+            },
+            "RatePlanID": 2,
+            "RateTagging": [],
+            "MasterRoomID": 224564471,
+            "UserLevel": ""
+          }
+        ]
+      }
+    ]
+  },
+  "ShoppingID": "c2bc42cb5a2f4ef1bc02a389391dc51e"
+}

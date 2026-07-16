@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Room/Rate Details — Partner Analysis</title>
+  <style>
+    /* ── Design tokens (kb-companion palette) ── */
+    :root {
+      --bg: #fafaf7; --bg-elev: #ffffff;
+      --fg: #1f1f1f; --fg-muted: #6e6e6e; --fg-subtle: #9a9a9a;
+      --accent: #6754d6; --accent-soft: #ece8ff;
+      --border: #e6e3dc; --border-strong: #c8c3b8;
+      --good: #2f7a3a; --good-soft: #e2efe3;
+      --warn: #b06a00; --warn-soft: #fbeed1;
+      --bad: #b03a3a; --bad-soft: #f6dede;
+      --info: #1f5fa0; --info-soft: #dfeaf6;
+      --shadow: 0 1px 2px rgba(0,0,0,.04), 0 4px 12px rgba(0,0,0,.04);
+      --radius: 10px;
+      --mono: ui-monospace, SFMono-Regular, "JetBrains Mono", Menlo, monospace;
+      --serif: ui-serif, "Source Serif Pro", Georgia, serif;
+      --sans: -apple-system, BlinkMacSystemFont, "Inter", system-ui, sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1f1e1c; --bg-elev: #2a2926;
+        --fg: #ebe8e1; --fg-muted: #a8a39a; --fg-subtle: #7a7570;
+        --accent: #9b88ff; --accent-soft: #2e2a4a;
+        --border: #3a3833; --border-strong: #524f48;
+        --good-soft: #1f3522; --warn-soft: #3a2c12; --bad-soft: #3a1f1f; --info-soft: #1f2c3a;
+      }
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--bg); color: var(--fg);
+      font-family: var(--sans); font-size: 15px; line-height: 1.55;
+      -webkit-font-smoothing: antialiased; }
+
+    /* ── Frame ── */
+    .frame-header {
+      display: flex; align-items: center; gap: 12px;
+      padding: 12px 24px; background: var(--bg-elev);
+      border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 10;
+    }
+    .frame-badge {
+      font-family: var(--mono); font-size: 11px; text-transform: uppercase;
+      letter-spacing: .08em; background: var(--accent-soft); color: var(--accent);
+      padding: 3px 8px; border-radius: 999px;
+    }
+    .frame-title { font-family: var(--mono); font-size: 13px; color: var(--fg-muted); flex: 1; }
+    .frame-meta  { font-family: var(--mono); font-size: 11px; color: var(--fg-subtle); }
+    main { max-width: 1080px; margin: 0 auto; padding: 28px 24px 80px; }
+    h1 { font-family: var(--serif); font-size: 1.8rem; margin: 0 0 4px; line-height: 1.2; }
+    .subtitle { color: var(--fg-muted); font-size: .9rem; margin: 0 0 20px;
+      font-family: var(--mono); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+    /* ── Summary bar ── */
+    .summary-bar {
+      display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px;
+    }
+    .stat {
+      background: var(--bg-elev); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 12px 18px; box-shadow: var(--shadow);
+      display: flex; flex-direction: column; gap: 2px; min-width: 110px;
+    }
+    .stat .n { font-size: 1.9rem; font-weight: 700; line-height: 1; }
+    .stat .lbl { font-family: var(--mono); font-size: .72rem; text-transform: uppercase;
+      letter-spacing: .07em; color: var(--fg-muted); }
+    .stat.high  .n { color: var(--good); }
+    .stat.medium .n { color: var(--warn); }
+    .stat.low   .n { color: var(--warn); }
+    .stat.none  .n { color: var(--fg-subtle); }
+
+    /* ── Filter chips ── */
+    .filters { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+    .chip {
+      font-family: var(--mono); font-size: .8rem; padding: 5px 14px;
+      border-radius: 999px; border: 1px solid var(--border); background: var(--bg-elev);
+      cursor: pointer; transition: all .12s; color: var(--fg-muted); user-select: none;
+    }
+    .chip:hover { border-color: var(--accent); color: var(--accent); }
+    .chip.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+    /* ── Table ── */
+    .matrix { border: 1px solid var(--border); border-radius: var(--radius);
+      overflow-x: auto; box-shadow: var(--shadow); }
+    table { width: 100%; border-collapse: collapse; font-size: .88rem; margin: 0; }
+    th { background: var(--bg); color: var(--fg-muted); font-weight: 600; font-size: .78rem;
+      text-transform: uppercase; letter-spacing: .05em; padding: 9px 12px;
+      border-bottom: 1px solid var(--border-strong); white-space: nowrap; cursor: pointer; }
+    th:hover { color: var(--accent); }
+    th .sort-icon { font-size: .7rem; margin-left: 4px; opacity: .4; }
+    th.sorted .sort-icon { opacity: 1; color: var(--accent); }
+    td { padding: 9px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    tr:last-child td { border-bottom: 0; }
+    tr.hidden { display: none; }
+    tr:hover td { background: color-mix(in srgb, var(--accent-soft) 30%, transparent); }
+
+    .partner-id { font-family: var(--mono); font-weight: 600; font-size: .92rem; }
+    .filename   { font-family: var(--mono); font-size: .78rem; color: var(--fg-muted); }
+    .filename a { color: var(--accent); text-decoration: none; }
+    .filename a:hover { text-decoration: underline; }
+    .field-path { font-family: var(--mono); font-size: .78rem; color: var(--fg);
+      word-break: break-all; }
+    .sample-val { font-family: var(--mono); font-size: .82rem; color: var(--accent); }
+    .notes-text { font-size: .82rem; color: var(--fg-muted); }
+
+    .badge {
+      display: inline-block; font-family: var(--mono); font-size: .72rem;
+      text-transform: uppercase; letter-spacing: .07em; padding: 3px 9px;
+      border-radius: 4px; font-weight: 600; white-space: nowrap;
+    }
+    .badge.High   { background: var(--good-soft);   color: var(--good); }
+    .badge.Medium { background: var(--warn-soft);   color: var(--warn); }
+    .badge.Low    { background: var(--warn-soft);   color: var(--warn); opacity: .8; }
+    .badge.None   { background: var(--bg); color: var(--fg-subtle);
+      border: 1px solid var(--border); }
+    .not-found { color: var(--fg-subtle); font-style: italic; font-size: .82rem; }
+  </style>
+</head>
+<body>
+
+<header class="frame-header">
+  <span class="frame-badge">explore-partner-api-responses</span>
+  <span class="frame-title">Room/Rate Details — Partner Analysis</span>
+  <span class="frame-meta">2026-07-16</span>
+</header>
+
+<main>
+  <h1>Room/Rate Details</h1>
+  <p class="subtitle" title="/tmp/partner-api-responses/run_1784121705/wario-data">/tmp/partner-api-responses/run_1784121705/wario-data</p>
+
+  <div class="summary-bar" id="summary-bar"><!-- filled by JS --></div>
+  <div class="filters" id="filters"><!-- filled by JS --></div>
+
+  <div class="matrix">
+    <table id="results-table">
+      <thead>
+        <tr>
+          <th data-col="partner">Partner <span class="sort-icon">↕</span></th>
+          <th data-col="engine">Engine <span class="sort-icon">↕</span></th>
+          <th data-col="file">File</th>
+          <th data-col="field">Field(s) found</th>
+          <th data-col="sample">Sample value</th>
+          <th data-col="confidence">Confidence <span class="sort-icon">↕</span></th>
+          <th data-col="notes">Notes</th>
+        </tr>
+      </thead>
+      <tbody id="results-body"><!-- filled by JS --></tbody>
+    </table>
+  </div>
+</main>
+
+<script>
+  const DATA = {"concept": "Room/Rate Details", "directory": "/tmp/partner-api-responses/run_1784121705/wario-data", "generated": "2026-07-16", "rows": [{"partner": "h_ct", "file": "partner-http-0.responseBody.json", "filepath": "data/h_ct/partner-http-0.responseBody.json", "field": "DataResponse.Hotel.[].SubRoom.[].RoomInfo.RoomName; .BedInfo.[].BedType; .MaxOccupancy; .RoomArea.Size/.Unit; .RatePlanID; .RateTagging.[]; .RoomRate.BaseRate.Amount/.AverageAmount/.PublicPrice/.Currency; .RoomRate.TaxAndFees.[].SubType/.AverageAmount/.PaidAtCheckout; .RulesandRestrictions.Cancellation.DeadlineStr/.Guarantee/.Refundable; .RulesandRestrictions.PaymentMethod; .PayType; .Inclusions.[].type/.Value; CheckInTime; CheckOutTime; Hotel_Availability", "sample": "RoomName: \"Classic δίκλινο δωμάτιο\"; BedType: \"Double Bed\"; MaxOccupancy: 2; RoomArea: 20 sq_m; BaseRate.Amount: 326.63 EUR; TaxAndFees: [{\"Accommodation Fee\", 14.24, paid_at_checkout=true}]; Cancellation.DeadlineStr: \"2026-07-15 21:58:42\"; Guarantee: true; PaymentMethod: \"Prepay online\"; Inclusions: [{\"FreeBreakfast\"}]; Hotel_Availability: \"Available\"", "confidence": "High", "notes": "Rich room/rate payload from Ctrip (tripmeta_hotel engine). Includes localised room name, bed type, occupancy, room area, itemised taxes with pay-at-checkout flag, cancellation deadline (human-readable), guarantee flag, payment method, inclusions (free breakfast), and top-level availability status."}, {"partner": "h_bc", "file": "price.responseBody.txt", "filepath": "data/h_bc/price.responseBody.txt", "field": "not found", "sample": "no content", "confidence": "None", "notes": "Booking.com (booking_v2_hotel) returned an empty price response. The gRPC call timed out at 35s — Booking.com did not complete the price/availability response in time. No room/rate fields extractable. Re-run with fewer hotel_id_mappings or later check-in date may yield data."}]};
+
+  const CONF_ORDER = { High: 0, Medium: 1, Low: 2, None: 3 };
+
+  function renderSummary() {
+    const counts = { total: DATA.rows.length, High: 0, Medium: 0, Low: 0, None: 0 };
+    DATA.rows.forEach(r => counts[r.confidence] = (counts[r.confidence] || 0) + 1);
+    const found = DATA.rows.filter(r => r.confidence !== 'None').length;
+    const bar = document.getElementById('summary-bar');
+    bar.innerHTML = `
+      <div class="stat"><span class="n">${found}/${counts.total}</span><span class="lbl">partners with data</span></div>
+      <div class="stat high"><span class="n">${counts.High}</span><span class="lbl">High confidence</span></div>
+      <div class="stat medium"><span class="n">${counts.Medium}</span><span class="lbl">Medium confidence</span></div>
+      ${counts.Low ? `<div class="stat low"><span class="n">${counts.Low}</span><span class="lbl">Low confidence</span></div>` : ''}
+      <div class="stat none"><span class="n">${counts.None}</span><span class="lbl">Not found</span></div>
+    `;
+  }
+
+  function renderFilters() {
+    const counts = {};
+    DATA.rows.forEach(r => counts[r.confidence] = (counts[r.confidence] || 0) + 1);
+    const box = document.getElementById('filters');
+    const filters = ['All', ...Object.keys(CONF_ORDER).filter(c => counts[c] > 0)];
+    box.innerHTML = filters.map(f =>
+      `<button class="chip ${f === 'All' ? 'active' : ''}" data-filter="${f}">${f}${f !== 'All' ? ` (${counts[f]})` : ''}</button>`
+    ).join('');
+    box.querySelectorAll('.chip').forEach(btn => btn.addEventListener('click', () => {
+      box.querySelectorAll('.chip').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filterRows(btn.dataset.filter);
+    }));
+  }
+
+  function filterRows(conf) {
+    document.querySelectorAll('#results-body tr').forEach(tr => {
+      tr.classList.toggle('hidden', conf !== 'All' && tr.dataset.confidence !== conf);
+    });
+  }
+
+  function esc(s) {
+    return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function renderRows(rows) {
+    const tbody = document.getElementById('results-body');
+    tbody.innerHTML = rows.map(r => `
+      <tr data-confidence="${esc(r.confidence)}">
+        <td><span class="partner-id">${esc(r.partner)}</span></td>
+        <td><span class="filename" style="font-family:var(--mono);font-size:.78rem;color:var(--fg-muted)">${esc(r.engine || '—')}</span></td>
+        <td><span class="filename">${r.filepath
+          ? `<a href="${esc(r.filepath)}" target="_blank">${esc(r.file)}</a>`
+          : esc(r.file)
+        }</span></td>
+        <td>${r.field ? `<code class="field-path">${esc(r.field)}</code>` : `<span class="not-found">not found</span>`}</td>
+        <td>${r.sample ? `<span class="sample-val">${esc(r.sample)}</span>` : `<span class="not-found">—</span>`}</td>
+        <td><span class="badge ${esc(r.confidence)}">${esc(r.confidence)}</span></td>
+        <td><span class="notes-text">${esc(r.notes)}</span></td>
+      </tr>
+    `).join('');
+  }
+
+  let sortCol = 'confidence', sortAsc = true;
+
+  function sortAndRender() {
+    const rows = [...DATA.rows].sort((a, b) => {
+      let av = a[sortCol] ?? '', bv = b[sortCol] ?? '';
+      if (sortCol === 'confidence') {
+        av = CONF_ORDER[av] ?? 99; bv = CONF_ORDER[bv] ?? 99;
+        return sortAsc ? av - bv : bv - av;
+      }
+      return sortAsc ? String(av).localeCompare(String(bv)) : String(bv).localeCompare(String(av));
+    });
+    renderRows(rows);
+    document.querySelectorAll('th').forEach(th => {
+      th.classList.toggle('sorted', th.dataset.col === sortCol);
+      const icon = th.querySelector('.sort-icon');
+      if (icon && th.dataset.col === sortCol) icon.textContent = sortAsc ? '↑' : '↓';
+      else if (icon) icon.textContent = '↕';
+    });
+    // Re-apply current filter
+    const active = document.querySelector('.chip.active');
+    if (active) filterRows(active.dataset.filter);
+  }
+
+  document.querySelectorAll('th[data-col]').forEach(th => {
+    th.addEventListener('click', () => {
+      if (sortCol === th.dataset.col) sortAsc = !sortAsc;
+      else { sortCol = th.dataset.col; sortAsc = true; }
+      sortAndRender();
+    });
+  });
+
+  renderSummary();
+  renderFilters();
+  sortAndRender();
+</script>
+</body>
+</html>
